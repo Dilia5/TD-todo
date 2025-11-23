@@ -50,7 +50,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $sql = "UPDATE todo SET tache = ? WHERE idtodo = ?";
         $stmt = $pdo->prepare($sql);
         $stmt->execute([$tache, $idtodo]);
-        $message = "Tâche ID $idtodo modifiée avec succès.";
+        $message = "Tâche modifiée avec succès.";
 
 
         } elseif ($action === 'delete' && $idtodo) {
